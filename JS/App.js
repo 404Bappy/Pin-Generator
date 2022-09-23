@@ -33,4 +33,16 @@ document.getElementById('Key-pad').addEventListener('click',function(event){
     }
 
   
-})
+});
+
+function verifyPin(){
+    const generatedPin = document.getElementById('Display-Pin').value;
+    const typedNumbers = document.getElementById('typed-numbers').value;
+
+    if(generatedPin == typedNumbers){
+        console.log('matched')
+    }
+    else{
+        console.log('Hur beta');
+    }
+}
