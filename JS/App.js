@@ -38,11 +38,15 @@ document.getElementById('Key-pad').addEventListener('click',function(event){
 function verifyPin(){
     const generatedPin = document.getElementById('Display-Pin').value;
     const typedNumbers = document.getElementById('typed-numbers').value;
-
+    const correctNotification = document.getElementById('notify-correct');
+    const failedNotification = document.getElementById('notify-Fail');
     if(generatedPin == typedNumbers){
-        console.log('matched')
+        
+        correctNotification.style.display = 'block';
+        failedNotification.style.display = 'none';   
     }
     else{
-        console.log('Hur beta');
-    }
+        correctNotification.style.display = 'none';
+        failedNotification.style.display = 'block';   
+     }
 }
